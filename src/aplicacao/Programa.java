@@ -49,12 +49,12 @@ public class Programa {
 			break;
 			default:
 				System.out.println("Selecione uma opcao valida: ");
+				break;
 				
 				
-				
-;			}
+			}
 		} while(op != 4);
-		
+		sc.close();
 	}
 	public static boolean primos(int n){
 		int div = 1, total = 0;

@@ -19,30 +19,30 @@ public class Main {
 		int opcao;
 		Produto produto = new Produto();
 		System.out.println("Digite o nome do produto:");
-		produto.nome = sc.next();
+		produto.setnome(sc.next());
 		System.out.println("Digite o valor do produto:");
-		produto.valor = sc.nextDouble();
+		produto.setvalor(sc.nextDouble());
 		System.out.println("Digite a quantidade do produto:");
-		produto.quantidade = sc.nextInt();
+		produto.setquantidade(sc.nextInt());
 		
 		do {
 			menu();
 			opcao = sc.nextInt();
 			switch(opcao) {
 			case 1:
-				System.out.println("Produto: " + produto.nome);
-				System.out.println("Valor: " + produto.valor);
-				System.out.println("Quantidade em estoque: " + produto.quantidade);
+				System.out.println("Produto: " + produto.getnome());
+				System.out.println("Valor: " + produto.getvalor());
+				System.out.println("Quantidade em estoque: " + produto.getquantidade());
 				break;
 				
 			case 2:
 				System.out.println("Digite o valor de produtos a serem adicionados:");
-				produto.quantidade += sc.nextInt();
+				produto.setquantidade(produto.getquantidade() +  sc.nextInt());
 				
 				System.out.println("Quantidade atualizada:");
-				System.out.println("Produto: " + produto.nome);
-				System.out.println("Valor: " + produto.valor);
-				System.out.println("Quantidade em estoque: " + produto.quantidade);
+				System.out.println("Produto: " + produto.getnome());
+				System.out.println("Valor: " + produto.getvalor());
+				System.out.println("Quantidade em estoque: " + produto.getquantidade());
 
 				break;
 				
@@ -52,9 +52,9 @@ public class Main {
 					System.out.println("Digite uma quantidade valida");
 				}
 				System.out.println("Quantidade atualizada:");
-				System.out.println("Produto: " + produto.nome);
-				System.out.println("Valor: " + produto.valor);
-				System.out.println("Quantidade em estoque: " + produto.quantidade);
+				System.out.println("Produto: " + produto.getnome());
+				System.out.println("Valor: " + produto.getvalor());
+				System.out.println("Quantidade em estoque: " + produto.getquantidade());
 				
 				break;
 				
